@@ -1,0 +1,132 @@
+{
+  "features": [
+    "job_title",
+    "experience_years",
+    "education_level",
+    "skills_count",
+    "industry",
+    "company_size",
+    "location",
+    "remote_work",
+    "certifications",
+    "total_days_worked",
+    "aggregated_score",
+    "skill_bracket"
+  ],
+  "numeric_features": [
+    "experience_years",
+    "skills_count",
+    "certifications",
+    "total_days_worked",
+    "aggregated_score"
+  ],
+  "categorical_features": [
+    "job_title",
+    "education_level",
+    "industry",
+    "company_size",
+    "location",
+    "remote_work",
+    "skill_bracket"
+  ],
+  "labels": [
+    "Large",
+    "Medium",
+    "No Vacation",
+    "Small"
+  ],
+  "best_model": "CatBoost_native",
+  "seconds": 181.24,
+  "results": [
+    {
+      "model": "CatBoost_native",
+      "accuracy": 0.760875,
+      "precision_macro": 0.6894220666421786,
+      "recall_macro": 0.6716636884379285,
+      "f1_macro": 0.6799504218421768,
+      "precision_weighted": 0.7563164029181567,
+      "recall_weighted": 0.760875,
+      "f1_weighted": 0.7581663585216475
+    },
+    {
+      "model": "HistGradientBoosting",
+      "accuracy": 0.7605625,
+      "precision_macro": 0.6853086294716476,
+      "recall_macro": 0.6675577096012383,
+      "f1_macro": 0.6756466657363123,
+      "precision_weighted": 0.752782714683434,
+      "recall_weighted": 0.7605625,
+      "f1_weighted": 0.7560293757005689
+    },
+    {
+      "model": "LightGBM_multiclass",
+      "accuracy": 0.7604375,
+      "precision_macro": 0.6869262958193069,
+      "recall_macro": 0.6687528555966284,
+      "f1_macro": 0.6771590550742272,
+      "precision_weighted": 0.7535908222289964,
+      "recall_weighted": 0.7604375,
+      "f1_weighted": 0.756454120267816
+    },
+    {
+      "model": "ExtraTrees_balanced",
+      "accuracy": 0.74225,
+      "precision_macro": 0.6789778615347917,
+      "recall_macro": 0.6889805521738479,
+      "f1_macro": 0.6815633009769173,
+      "precision_weighted": 0.7657048916174656,
+      "recall_weighted": 0.74225,
+      "f1_weighted": 0.751316877822244
+    },
+    {
+      "model": "RandomForest_balanced",
+      "accuracy": 0.7411875,
+      "precision_macro": 0.6769419932129708,
+      "recall_macro": 0.6871933022607574,
+      "f1_macro": 0.679816986486242,
+      "precision_weighted": 0.7638415909152577,
+      "recall_weighted": 0.7411875,
+      "f1_weighted": 0.7500324141143595
+    },
+    {
+      "model": "DecisionTree_depthNone_leaf100",
+      "accuracy": 0.7255625,
+      "precision_macro": 0.665508749723107,
+      "recall_macro": 0.6790524511383499,
+      "f1_macro": 0.6685658074614349,
+      "precision_weighted": 0.7576574994704793,
+      "recall_weighted": 0.7255625,
+      "f1_weighted": 0.7373557296126336
+    },
+    {
+      "model": "DecisionTree_depth8_leaf30",
+      "accuracy": 0.7100625,
+      "precision_macro": 0.6553547149263927,
+      "recall_macro": 0.6693015567209899,
+      "f1_macro": 0.6569812344484806,
+      "precision_weighted": 0.7522977278672496,
+      "recall_weighted": 0.7100625,
+      "f1_weighted": 0.7248005070808867
+    },
+    {
+      "model": "DecisionTree_depth4_leaf20",
+      "accuracy": 0.6614375,
+      "precision_macro": 0.6029700683262073,
+      "recall_macro": 0.5461320150659335,
+      "f1_macro": 0.5325260456305176,
+      "precision_weighted": 0.6594164279547191,
+      "recall_weighted": 0.6614375,
+      "f1_weighted": 0.6322714559995097
+    },
+    {
+      "model": "Dummy_most_frequent",
+      "accuracy": 0.542,
+      "precision_macro": 0.1355,
+      "recall_macro": 0.25,
+      "f1_macro": 0.17574578469520102,
+      "precision_weighted": 0.293764,
+      "recall_weighted": 0.542,
+      "f1_weighted": 0.38101686121919587
+    }
+  ]
+}

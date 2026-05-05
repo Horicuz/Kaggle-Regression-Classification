@@ -1,0 +1,16 @@
+Best V1: CatBoost_V1_FE_dropagg_seed3
+                        model  accuracy  precision_macro  recall_macro  f1_macro  precision_weighted  recall_weighted  f1_weighted  cv_accuracy_mean  cv_f1_macro_mean                                   notes
+ CatBoost_V1_FE_dropagg_seed3  0.762062         0.692933      0.672087  0.681694            0.757981         0.762062     0.759469               NaN               NaN  {'drop_agg': True, 'drop_cert': False}
+CatBoost_V1_FE_dropcert_seed3  0.761938         0.692841      0.672664  0.681963            0.758324         0.761938     0.759610               NaN               NaN  {'drop_agg': False, 'drop_cert': True}
+ CatBoost_V1_FE_keepraw_seed3  0.761625         0.692715      0.671522  0.681282            0.757287         0.761625     0.758882          0.759047          0.672995 {'drop_agg': False, 'drop_cert': False}
+
+              precision    recall  f1-score   support
+
+       Large       0.80      0.72      0.76      1977
+      Medium       0.54      0.50      0.52      2132
+ No Vacation       0.88      0.91      0.89      8672
+       Small       0.55      0.56      0.55      3219
+
+    accuracy                           0.76     16000
+   macro avg       0.69      0.67      0.68     16000
+weighted avg       0.76      0.76      0.76     16000

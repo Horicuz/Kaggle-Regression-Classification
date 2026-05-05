@@ -1,0 +1,90 @@
+{
+  "baseline_file": "submission_gm_lgbm_seed_ensemble.csv",
+  "baseline_public_score": 268447210.37,
+  "created": [
+    {
+      "file": "submission_gm_allseed_75lgbm_15cat_10xgb.csv",
+      "weights": {
+        "lgbm_seed_ensemble": 0.75,
+        "cat_seed_ensemble": 0.15,
+        "xgb_seed_ensemble": 0.1
+      },
+      "diff_vs_lgbm_abs_mean": 204.15725495665944,
+      "corr_vs_lgbm": 0.9999713856829219,
+      "mean": 157296.63851151758,
+      "std": 35614.08143321107
+    },
+    {
+      "file": "submission_gm_allseed_80lgbm_12cat_08xgb.csv",
+      "weights": {
+        "lgbm_seed_ensemble": 0.8,
+        "cat_seed_ensemble": 0.12,
+        "xgb_seed_ensemble": 0.08
+      },
+      "diff_vs_lgbm_abs_mean": 163.32580396532734,
+      "corr_vs_lgbm": 0.9999816873015194,
+      "mean": 157299.30634672262,
+      "std": 35614.441332845665
+    },
+    {
+      "file": "submission_gm_allseed_85lgbm_10cat_05xgb.csv",
+      "weights": {
+        "lgbm_seed_ensemble": 0.85,
+        "cat_seed_ensemble": 0.1,
+        "xgb_seed_ensemble": 0.05
+      },
+      "diff_vs_lgbm_abs_mean": 123.59225814023922,
+      "corr_vs_lgbm": 0.9999895348274611,
+      "mean": 157301.5595084461,
+      "std": 35614.82536545314
+    },
+    {
+      "file": "submission_gm_allseed_88lgbm_08cat_04xgb.csv",
+      "weights": {
+        "lgbm_seed_ensemble": 0.88,
+        "cat_seed_ensemble": 0.08,
+        "xgb_seed_ensemble": 0.04
+      },
+      "diff_vs_lgbm_abs_mean": 98.87380651219131,
+      "corr_vs_lgbm": 0.9999933024204932,
+      "mean": 157303.2431442654,
+      "std": 35615.13990320572
+    },
+    {
+      "file": "submission_gm_allseed_90lgbm_07cat_03xgb.csv",
+      "weights": {
+        "lgbm_seed_ensemble": 0.9,
+        "cat_seed_ensemble": 0.07,
+        "xgb_seed_ensemble": 0.03
+      },
+      "diff_vs_lgbm_abs_mean": 82.86970495315445,
+      "corr_vs_lgbm": 0.9999953006168937,
+      "mean": 157304.2273436511,
+      "std": 35615.34679604728
+    },
+    {
+      "file": "submission_gm_allseed_92lgbm_05cat_03xgb.csv",
+      "weights": {
+        "lgbm_seed_ensemble": 0.92,
+        "cat_seed_ensemble": 0.05,
+        "xgb_seed_ensemble": 0.03
+      },
+      "diff_vs_lgbm_abs_mean": 65.52362624354846,
+      "corr_vs_lgbm": 0.9999970549914892,
+      "mean": 157305.62621651834,
+      "std": 35615.62563400926
+    },
+    {
+      "file": "submission_gm_allseed_95lgbm_03cat_02xgb.csv",
+      "weights": {
+        "lgbm_seed_ensemble": 0.95,
+        "cat_seed_ensemble": 0.03,
+        "xgb_seed_ensemble": 0.02
+      },
+      "diff_vs_lgbm_abs_mean": 40.831450991332176,
+      "corr_vs_lgbm": 0.9999988555670024,
+      "mean": 157307.30985233767,
+      "std": 35616.01022363991
+    }
+  ]
+}

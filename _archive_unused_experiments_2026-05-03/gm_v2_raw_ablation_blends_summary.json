@@ -1,0 +1,205 @@
+{
+  "drop75_anchor": "submission_gm_bestaway_aggbins_dropraw_w0p75.csv",
+  "current_best_anchor": "submission_gm_drop75_plus_v2drop_w0p2.csv",
+  "current_best_public_score_reported": "2681... from user",
+  "created": [
+    {
+      "file": "submission_gm_drop75_plus_v2dropcert_w0p1.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 72.00513805574066,
+      "diff_vs_current_abs_mean": 75.69547646115413,
+      "diff_vs_drop75_abs_mean": 72.00513805574066,
+      "diff_vs_seed_abs_mean": 263.0831217257533,
+      "corr_vs_current": 0.9999959704469502,
+      "mean": 157350.17328052627,
+      "std": 35615.39638133559
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropcert_w0p2.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 144.0102761114816,
+      "diff_vs_current_abs_mean": 46.90197815089554,
+      "diff_vs_drop75_abs_mean": 144.0102761114816,
+      "diff_vs_seed_abs_mean": 287.36756515581834,
+      "corr_vs_current": 0.9999984767080256,
+      "mean": 157346.9997528833,
+      "std": 35616.03352955862
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropcert_w0p3.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 216.01541416722327,
+      "diff_vs_current_abs_mean": 95.18996876944104,
+      "diff_vs_drop75_abs_mean": 216.01541416722327,
+      "diff_vs_seed_abs_mean": 325.9062178429134,
+      "corr_vs_current": 0.9999935341179874,
+      "mean": 157343.82622524034,
+      "std": 35616.93597958022
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropskills_w0p1.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 72.92374668120851,
+      "diff_vs_current_abs_mean": 73.80726706770793,
+      "diff_vs_drop75_abs_mean": 72.92374668120851,
+      "diff_vs_seed_abs_mean": 263.6459103256795,
+      "corr_vs_current": 0.9999961343967144,
+      "mean": 157350.54035527795,
+      "std": 35616.35585336148
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropskills_w0p2.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 145.8474933624169,
+      "diff_vs_current_abs_mean": 43.73624930413905,
+      "diff_vs_drop75_abs_mean": 145.8474933624169,
+      "diff_vs_seed_abs_mean": 289.0097437919951,
+      "corr_vs_current": 0.9999986282936143,
+      "mean": 157347.73390238665,
+      "std": 35617.95874822757
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropskills_w0p3.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 218.77124004362634,
+      "diff_vs_current_abs_mean": 94.90219042065863,
+      "diff_vs_drop75_abs_mean": 218.77124004362634,
+      "diff_vs_seed_abs_mean": 328.93353099573216,
+      "corr_vs_current": 0.999993498283693,
+      "mean": 157344.92744949533,
+      "std": 35619.833197083244
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropboth_w0p1.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 72.66290131952051,
+      "diff_vs_current_abs_mean": 75.51794236919037,
+      "diff_vs_drop75_abs_mean": 72.66290131952051,
+      "diff_vs_seed_abs_mean": 264.18290084194905,
+      "corr_vs_current": 0.9999959621020224,
+      "mean": 157349.24116717724,
+      "std": 35615.90527179585
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropboth_w0p2.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 145.32580263904092,
+      "diff_vs_current_abs_mean": 47.54250114075582,
+      "diff_vs_drop75_abs_mean": 145.32580263904092,
+      "diff_vs_seed_abs_mean": 289.76139507880447,
+      "corr_vs_current": 0.9999983893956731,
+      "mean": 157345.13552618524,
+      "std": 35617.053823316535
+    },
+    {
+      "file": "submission_gm_drop75_plus_v2dropboth_w0p3.csv",
+      "reference": "drop75",
+      "diff_vs_reference_abs_mean": 217.98870395856258,
+      "diff_vs_current_abs_mean": 97.56911862090188,
+      "diff_vs_drop75_abs_mean": 217.98870395856258,
+      "diff_vs_seed_abs_mean": 329.564672332325,
+      "corr_vs_current": 0.9999932978723013,
+      "mean": 157341.02988519322,
+      "std": 35618.470177802636
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropcert_w0p05.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 29.482630905306934,
+      "diff_vs_current_abs_mean": 29.482630905306934,
+      "diff_vs_drop75_abs_mean": 167.06641692593178,
+      "diff_vs_seed_abs_mean": 298.6945055396516,
+      "corr_vs_current": 0.9999993760183061,
+      "mean": 157345.92638200813,
+      "std": 35619.32228899666
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropcert_w0p1.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 58.96526181061265,
+      "diff_vs_current_abs_mean": 58.96526181061265,
+      "diff_vs_drop75_abs_mean": 195.0854823546953,
+      "diff_vs_seed_abs_mean": 313.71730428996165,
+      "corr_vs_current": 0.9999975040986048,
+      "mean": 157344.64665304663,
+      "std": 35619.520044034085
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropcert_w0p15.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 88.44789271591988,
+      "diff_vs_current_abs_mean": 88.44789271591988,
+      "diff_vs_drop75_abs_mean": 223.5179417221448,
+      "diff_vs_seed_abs_mean": 330.7630505166943,
+      "corr_vs_current": 0.9999943842894734,
+      "mean": 157343.36692408507,
+      "std": 35619.762249530846
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropskills_w0p05.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 29.864574013312307,
+      "diff_vs_current_abs_mean": 29.864574013312307,
+      "diff_vs_drop75_abs_mean": 167.7221364645412,
+      "diff_vs_seed_abs_mean": 299.2987425601848,
+      "corr_vs_current": 0.9999993603282281,
+      "mean": 157346.10991938395,
+      "std": 35619.80550190211
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropskills_w0p1.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 59.72914802662363,
+      "diff_vs_current_abs_mean": 59.72914802662363,
+      "diff_vs_drop75_abs_mean": 196.3508573774696,
+      "diff_vs_seed_abs_mean": 315.02658348358074,
+      "corr_vs_current": 0.9999974414084501,
+      "mean": 157345.0137277983,
+      "std": 35620.48758695571
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropskills_w0p15.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 89.59372203993611,
+      "diff_vs_current_abs_mean": 89.59372203993611,
+      "diff_vs_drop75_abs_mean": 225.3234402024653,
+      "diff_vs_seed_abs_mean": 332.7139059940263,
+      "corr_vs_current": 0.9999942433949973,
+      "mean": 157343.91753621263,
+      "std": 35621.215237702054
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropboth_w0p05.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 29.83262258308117,
+      "diff_vs_current_abs_mean": 29.83262258308117,
+      "diff_vs_drop75_abs_mean": 167.28997700484427,
+      "diff_vs_seed_abs_mean": 299.2509023383056,
+      "corr_vs_current": 0.9999993678878318,
+      "mean": 157345.46032533358,
+      "std": 35619.57687435834
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropboth_w0p1.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 59.66524516616101,
+      "diff_vs_current_abs_mean": 59.66524516616101,
+      "diff_vs_drop75_abs_mean": 195.59345934175107,
+      "diff_vs_seed_abs_mean": 314.8192275620488,
+      "corr_vs_current": 0.9999974716132298,
+      "mean": 157343.7145396976,
+      "std": 35620.029793633905
+    },
+    {
+      "file": "submission_gm_currentbest_plus_v2dropboth_w0p15.csv",
+      "reference": "currentbest",
+      "diff_vs_reference_abs_mean": 89.49786774924237,
+      "diff_vs_current_abs_mean": 89.49786774924237,
+      "diff_vs_drop75_abs_mean": 224.28017352774802,
+      "diff_vs_seed_abs_mean": 332.3432713741237,
+      "corr_vs_current": 0.9999943112798303,
+      "mean": 157341.96875406159,
+      "std": 35620.52774126791
+    }
+  ]
+}

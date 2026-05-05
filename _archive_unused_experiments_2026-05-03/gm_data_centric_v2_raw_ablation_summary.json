@@ -1,0 +1,262 @@
+{
+  "idea": "Ablation peste V2: aggregated_score raw is always dropped; test whether raw skills_count/certifications should also be dropped while keeping their bins/interactions.",
+  "variants": [
+    {
+      "file": "submission_gm_lgbm_aggbins_plus_dropagg_dropcert_seed5.csv",
+      "importance_file": "feature_importance_lgbm_aggbins_plus_dropagg_dropcert_seed5.csv",
+      "diff_vs_seed5_mean": 11.633844196862574,
+      "diff_vs_seed5_abs_mean": 746.5027126355099,
+      "diff_vs_seed5_std": 1002.3687324992105,
+      "corr_vs_seed5": 0.9996042118635362,
+      "mean": 157321.6115317395,
+      "std": 35630.679140065266,
+      "top_features": [
+        {
+          "feature": "loc_company_target_mean",
+          "importance": 10992.0
+        },
+        {
+          "feature": "experience_x_skills",
+          "importance": 9035.0
+        },
+        {
+          "feature": "location_job_target_mean",
+          "importance": 8868.8
+        },
+        {
+          "feature": "edu_company_target_mean",
+          "importance": 8617.0
+        },
+        {
+          "feature": "industry_location_target_mean",
+          "importance": 8529.8
+        },
+        {
+          "feature": "edu_job_target_mean",
+          "importance": 8267.0
+        },
+        {
+          "feature": "experience_band_job_target_mean",
+          "importance": 8212.6
+        },
+        {
+          "feature": "industry_target_mean",
+          "importance": 8181.2
+        },
+        {
+          "feature": "aggregated_score_abs",
+          "importance": 7708.8
+        },
+        {
+          "feature": "experience_years",
+          "importance": 7646.0
+        },
+        {
+          "feature": "agg_decile_education_target_mean",
+          "importance": 7333.8
+        },
+        {
+          "feature": "skills_per_year",
+          "importance": 6886.0
+        },
+        {
+          "feature": "job_company_target_mean",
+          "importance": 6395.2
+        },
+        {
+          "feature": "agg_decile_company_target_mean",
+          "importance": 6234.4
+        },
+        {
+          "feature": "agg_x_certifications_plus1",
+          "importance": 6181.0
+        }
+      ],
+      "drop_numeric_aggregated_score": true,
+      "drop_raw_feature_cols": [
+        "certifications"
+      ],
+      "adversarial_summary": {
+        "auc": 0.7726767999999999,
+        "mean": 1.0,
+        "std": 0.16261422441588336,
+        "min": 0.6577843714019636,
+        "max": 3.922393958750814
+      },
+      "n_numeric_features": 18,
+      "n_categorical_features": 28
+    },
+    {
+      "file": "submission_gm_lgbm_aggbins_plus_dropagg_dropskills_seed5.csv",
+      "importance_file": "feature_importance_lgbm_aggbins_plus_dropagg_dropskills_seed5.csv",
+      "diff_vs_seed5_mean": 15.304591713461294,
+      "diff_vs_seed5_abs_mean": 757.8599753841526,
+      "diff_vs_seed5_std": 1014.470354647996,
+      "corr_vs_seed5": 0.9995948550762848,
+      "mean": 157325.2822792561,
+      "std": 35640.553469652834,
+      "top_features": [
+        {
+          "feature": "loc_company_target_mean",
+          "importance": 10974.8
+        },
+        {
+          "feature": "experience_x_skills",
+          "importance": 9277.4
+        },
+        {
+          "feature": "location_job_target_mean",
+          "importance": 8946.8
+        },
+        {
+          "feature": "edu_company_target_mean",
+          "importance": 8655.4
+        },
+        {
+          "feature": "industry_location_target_mean",
+          "importance": 8532.0
+        },
+        {
+          "feature": "edu_job_target_mean",
+          "importance": 8258.6
+        },
+        {
+          "feature": "experience_band_job_target_mean",
+          "importance": 8179.8
+        },
+        {
+          "feature": "industry_target_mean",
+          "importance": 8133.8
+        },
+        {
+          "feature": "aggregated_score_abs",
+          "importance": 7773.8
+        },
+        {
+          "feature": "experience_years",
+          "importance": 7671.0
+        },
+        {
+          "feature": "skills_per_year",
+          "importance": 7520.6
+        },
+        {
+          "feature": "agg_decile_education_target_mean",
+          "importance": 7375.0
+        },
+        {
+          "feature": "job_company_target_mean",
+          "importance": 6442.4
+        },
+        {
+          "feature": "agg_decile_company_target_mean",
+          "importance": 6245.4
+        },
+        {
+          "feature": "remote_work_target_mean",
+          "importance": 6026.4
+        }
+      ],
+      "drop_numeric_aggregated_score": true,
+      "drop_raw_feature_cols": [
+        "skills_count"
+      ],
+      "adversarial_summary": {
+        "auc": 0.77262643125,
+        "mean": 1.0,
+        "std": 0.1624949686190192,
+        "min": 0.6565253168674773,
+        "max": 3.9180878422516363
+      },
+      "n_numeric_features": 18,
+      "n_categorical_features": 28
+    },
+    {
+      "file": "submission_gm_lgbm_aggbins_plus_dropagg_dropskills_dropcert_seed5.csv",
+      "importance_file": "feature_importance_lgbm_aggbins_plus_dropagg_dropskills_dropcert_seed5.csv",
+      "diff_vs_seed5_mean": 2.3127107064882866,
+      "diff_vs_seed5_abs_mean": 755.8845208173539,
+      "diff_vs_seed5_std": 1011.0886651386365,
+      "corr_vs_seed5": 0.9995974211018545,
+      "mean": 157312.29039824914,
+      "std": 35635.879699242134,
+      "top_features": [
+        {
+          "feature": "loc_company_target_mean",
+          "importance": 11132.2
+        },
+        {
+          "feature": "experience_x_skills",
+          "importance": 9309.4
+        },
+        {
+          "feature": "location_job_target_mean",
+          "importance": 8968.4
+        },
+        {
+          "feature": "edu_company_target_mean",
+          "importance": 8776.4
+        },
+        {
+          "feature": "industry_location_target_mean",
+          "importance": 8423.4
+        },
+        {
+          "feature": "edu_job_target_mean",
+          "importance": 8335.6
+        },
+        {
+          "feature": "experience_band_job_target_mean",
+          "importance": 8225.6
+        },
+        {
+          "feature": "industry_target_mean",
+          "importance": 8193.6
+        },
+        {
+          "feature": "aggregated_score_abs",
+          "importance": 7692.4
+        },
+        {
+          "feature": "experience_years",
+          "importance": 7592.2
+        },
+        {
+          "feature": "skills_per_year",
+          "importance": 7509.6
+        },
+        {
+          "feature": "agg_decile_education_target_mean",
+          "importance": 7280.8
+        },
+        {
+          "feature": "job_company_target_mean",
+          "importance": 6440.4
+        },
+        {
+          "feature": "agg_decile_company_target_mean",
+          "importance": 6256.0
+        },
+        {
+          "feature": "certification_bucket_target_mean",
+          "importance": 6188.8
+        }
+      ],
+      "drop_numeric_aggregated_score": true,
+      "drop_raw_feature_cols": [
+        "skills_count",
+        "certifications"
+      ],
+      "adversarial_summary": {
+        "auc": 0.7742123937500001,
+        "mean": 1.0,
+        "std": 0.1675835492924144,
+        "min": 0.6589866789334275,
+        "max": 3.909139301294454
+      },
+      "n_numeric_features": 17,
+      "n_categorical_features": 28
+    }
+  ],
+  "seconds": 461.4
+}

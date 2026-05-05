@@ -1,0 +1,69 @@
+{
+  "baseline_best_known_public": {
+    "file": "submission_gm_lgbm_seed_ensemble.csv",
+    "score": 268447210.37
+  },
+  "known_worse_reference": {
+    "file": "submission_gm_blend_75lgbm_15cat_10xgb.csv",
+    "score": 268817291.42,
+    "interpretation": "Adding 15% CatBoost and 10% XGBoost moved predictions in a worse direction on public leaderboard."
+  },
+  "created": [
+    {
+      "file": "submission_gm_micro_lgbm98_xgb02.csv",
+      "mean": 157309.4081616385,
+      "std": 35616.489041122164,
+      "diff_vs_lgbm_mean": -0.5695259041761523,
+      "diff_vs_lgbm_abs_mean": 17.638870604566428,
+      "corr_vs_lgbm": 0.9999997866741154
+    },
+    {
+      "file": "submission_gm_micro_lgbm97_xgb03.csv",
+      "mean": 157309.12339868638,
+      "std": 35616.391140556734,
+      "diff_vs_lgbm_mean": -0.8542888562647664,
+      "diff_vs_lgbm_abs_mean": 26.458305906849542,
+      "corr_vs_lgbm": 0.999999520014058
+    },
+    {
+      "file": "submission_gm_micro_lgbm98_cat02.csv",
+      "mean": 157308.57881467542,
+      "std": 35616.36273735867,
+      "diff_vs_lgbm_mean": -1.3988728672323336,
+      "diff_vs_lgbm_abs_mean": 18.039285662626618,
+      "corr_vs_lgbm": 0.9999997804961414
+    },
+    {
+      "file": "submission_gm_micro_lgbm96_cat02_xgb02.csv",
+      "mean": 157308.00928877125,
+      "std": 35616.165920379346,
+      "diff_vs_lgbm_mean": -1.9683987714087108,
+      "diff_vs_lgbm_abs_mean": 32.43633027274902,
+      "corr_vs_lgbm": 0.9999992756947312
+    },
+    {
+      "file": "submission_gm_micro_lgbm94_cat03_xgb03.csv",
+      "mean": 157307.02508938554,
+      "std": 35615.920109113315,
+      "diff_vs_lgbm_mean": -2.952598157113598,
+      "diff_vs_lgbm_abs_mean": 48.6544954091235,
+      "corr_vs_lgbm": 0.9999983702899139
+    },
+    {
+      "file": "submission_gm_away75_alpha_m0p03.csv",
+      "mean": 157310.37785462156,
+      "std": 35616.80617021293,
+      "diff_vs_lgbm_mean": 0.4001670789094301,
+      "diff_vs_lgbm_abs_mean": 6.124717347857433,
+      "corr_vs_lgbm": 0.999999974251425
+    },
+    {
+      "file": "submission_gm_away75_alpha_m0p05.csv",
+      "mean": 157310.64463267417,
+      "std": 35616.88047650966,
+      "diff_vs_lgbm_mean": 0.6669451315156935,
+      "diff_vs_lgbm_abs_mean": 10.207862246429185,
+      "corr_vs_lgbm": 0.9999999284764722
+    }
+  ]
+}

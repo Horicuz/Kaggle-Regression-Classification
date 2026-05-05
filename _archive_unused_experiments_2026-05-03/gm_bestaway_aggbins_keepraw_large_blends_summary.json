@@ -1,0 +1,43 @@
+{
+  "anchor": "submission_gm_away75_alpha_m0p05.csv",
+  "new_model": "submission_gm_lgbm_aggbins_keepraw_seed5.csv",
+  "formula": "prediction = (1-w)*anchor + w*aggbins_keepraw",
+  "created": [
+    {
+      "file": "submission_gm_bestaway_aggbins_keepraw_w0p2.csv",
+      "weight_aggbins_keepraw": 0.2,
+      "diff_vs_anchor_abs_mean": 67.87815995719035,
+      "diff_vs_lgbm_seed_abs_mean": 67.59431742410041,
+      "corr_vs_anchor": 0.9999968776758297,
+      "mean": 157320.18816776384,
+      "std": 35617.11732673859
+    },
+    {
+      "file": "submission_gm_bestaway_aggbins_keepraw_w0p5.csv",
+      "weight_aggbins_keepraw": 0.5,
+      "diff_vs_anchor_abs_mean": 169.6953998929741,
+      "diff_vs_lgbm_seed_abs_mean": 168.8859931544005,
+      "corr_vs_anchor": 0.9999804861602516,
+      "mean": 157334.50347039837,
+      "std": 35617.8896234064
+    },
+    {
+      "file": "submission_gm_bestaway_aggbins_keepraw_w0p7.csv",
+      "weight_aggbins_keepraw": 0.7,
+      "diff_vs_anchor_abs_mean": 237.5735598501637,
+      "diff_vs_lgbm_seed_abs_mean": 236.67288725466724,
+      "corr_vs_anchor": 0.9999617542186103,
+      "mean": 157344.04700548804,
+      "std": 35618.68248800258
+    },
+    {
+      "file": "submission_gm_bestaway_aggbins_keepraw_w1p00.csv",
+      "weight_aggbins_keepraw": 1.0,
+      "diff_vs_anchor_abs_mean": 339.39079978594805,
+      "diff_vs_lgbm_seed_abs_mean": 338.4155945434584,
+      "corr_vs_anchor": 0.9999219528709434,
+      "mean": 157358.36230812254,
+      "std": 35620.28874799558
+    }
+  ]
+}

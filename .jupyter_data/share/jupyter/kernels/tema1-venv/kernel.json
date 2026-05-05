@@ -1,0 +1,16 @@
+{
+ "argv": [
+  "/Users/horicuz/Downloads/Tema1-CC 2/.venv/bin/python",
+  "-Xfrozen_modules=off",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python (.venv tema1)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
+ },
+ "kernel_protocol_version": "5.5"
+}
