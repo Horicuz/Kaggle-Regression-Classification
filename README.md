@@ -1,106 +1,103 @@
-# Tema 1 CC - Machine Learning
 
-Acest folder contine varianta curata pentru predare. Notebook-ul principal este
-`main.ipynb` si contine:
+# Kaggle Project — Regression & Classification (Complete)
 
-- partea A: EDA general pentru setul de date;
-- partea B: regresie pentru `salary`;
-- partea C: clasificare multiclasă pentru `vacation`.
+⭐ If you find this project useful, please give it a star on GitHub — it helps a lot!
 
-Raportul compact pentru citire/predare este `Raport_Tema1_CC.pdf`.
+## Theory & Context
 
-## Date
+This repository contains a complete solution for two tasks on educational data: a regression task (continuous prediction) and a classification task (categorical prediction). The main goals are:
 
-Fisierele folosite:
+- Understand and preprocess tabular data (feature engineering, handling missing values, encoding categoricals).
+- Train robust models using ensemble algorithms (LightGBM, XGBoost, etc.).
+- Evaluate performance with cross-validation (K-Fold) and produce final submission files.
 
-- `CC_education_economy_train.csv`
-- `CC_education_economy_test.csv`
-- `CC_private_test.csv`
+Methodological principles used:
 
-Train si test local contin ambele tinte (`salary`, `vacation`). Private test contine
-doar features si `id`, deci submission-urile finale au formatul `id,prediction`.
+- Clear separation between raw and aggregated features, and ablation studies to compare strategies.
+- Multi-seed training and blending/stacking to reduce variance and improve generalization.
+- Metric choices: regression metrics (RMSE, MAE); classification metrics (AUC-ROC, accuracy, F1 where appropriate).
 
-## Regresie
+## Results Summary
 
-Repere acoperite:
+Final output files are included in the repository:
 
-- baseline `LinearRegression`;
-- regularizare `Ridge` si `Lasso`;
-- metrici `MAE`, `MSE`, `RMSE`, `R2`;
-- grafice/analiza train vs test;
-- analiza erorilor pe test local;
-- submission final Kaggle.
+- [submission_regression_final.csv](submission_regression_final.csv) — final regression predictions.
+- [submission_classification_final.csv](submission_classification_final.csv) — final classification predictions.
 
-Firul de perfectionare a fost comprimat in notebook in cateva etape clare:
+Experiment reports and summaries are stored in `_archive_unused_experiments_2026-05-03/`.
 
-1. modele locale mai puternice si Target Encoding;
-2. pseudo-labeling pe private test;
-3. LightGBM seed ensemble;
-4. directie `away` fata de blenduri CatBoost/XGBoost care stricau scorul;
-5. data-centric V1 pe `aggregated_score`;
-6. data-centric V2 cu bins pentru `skills_count`, `experience_years`,
-   `certifications` si interaction target encoding.
+## Repository Structure (selected)
 
-Pentru laborator, codul si logurile care dovedesc aceste etape sunt pastrate in:
+- [main.ipynb](main.ipynb) — main notebook for exploration, training and submission generation.
+- [main copy.ipynb](main%20copy.ipynb) — auxiliary notebook copy.
+- [CC_education_economy_train.csv](CC_education_economy_train.csv) — training dataset.
+- [CC_education_economy_test.csv](CC_education_economy_test.csv) — test dataset.
+- [CC_private_test.csv](CC_private_test.csv) — private test dataset (if applicable).
+- `_archive_unused_experiments_2026-05-03/` — experiment history, results and helper scripts.
 
-- `regression_recovered_code`
+## Installation
 
-Folderul include notebook-uri vechi recuperate, scripturile mari de seed ensemble si
-data-centric LGBM, logul adversarial RandomForest cu AUC aproximativ 0.77 si logul
-detectorului CatBoost test-like cu AUC aproximativ 0.91.
+Prerequisites: Python 3.8+ recommended, `pip`, and a virtual environment tool (`venv`, `virtualenv`, or `conda`).
 
-Submission-ul final de regresie este:
+Example (venv):
 
-- `submission_regression_final.csv`
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -r requirements.txt
+```
 
-CSV-urile reprezentative pentru regresie sunt in:
+If `requirements.txt` is not present, install minimal packages manually:
 
-- `regression_csv_selected/01_baseline_minim`
-- `regression_csv_selected/02_perfectionare_kaggle`
+```bash
+pip install jupyterlab numpy pandas scikit-learn lightgbm xgboost matplotlib seaborn
+```
 
-## Clasificare
+## Usage — reproduce experiments
 
-Repere acoperite:
+1. Activate the virtual environment (see Installation).
+2. Start JupyterLab or Jupyter Notebook:
 
-- analiza echilibrului de clase pentru `vacation`;
-- baseline `DecisionTreeClassifier`;
-- variatie de hiperparametri pentru arbore (`max_depth`, `min_samples_leaf`);
-- metrici `accuracy`, `precision`, `recall`, `F1 macro`, `F1 weighted`;
-- confusion matrix;
-- perfectionare cu modele de tip ensemble/boosting;
-- versiune V1 data-centric cu bins si interactiuni categoriale;
-- Stratified K-Fold pentru modelul final.
+```bash
+jupyter lab
+# or
+jupyter notebook
+```
 
-Rezultatul local cel mai bun obtinut:
+3. Open [main.ipynb](main.ipynb) and run the cells in order to:
+   - Load the datasets.
+   - Execute preprocessing and feature engineering.
+   - Run training loops (K-Fold, multi-seed).
+   - Produce submission files `submission_*.csv`.
 
-| Model | Accuracy | F1 macro | F1 weighted |
-|---|---:|---:|---:|
-| `HistGradientBoosting` | 0.7611 | 0.6777 | 0.7568 |
-| `CatBoost_native` | 0.7606 | 0.6801 | 0.7581 |
-| `LightGBM_multiclass` | 0.7603 | 0.6759 | 0.7560 |
-| `DecisionTree_depthNone_leaf100` | 0.7256 | 0.6686 | 0.7374 |
-| `Dummy_most_frequent` | 0.5420 | 0.1757 | 0.3810 |
+Practical notes:
+- To speed up experiments, follow a stepwise approach: feature engineering → local validation → final training.
+- For batch runs, extract relevant notebook cells into a Python script.
 
-Submission-ul final de clasificare este:
+## Best Practices & Recommendations
 
-- `submission_classification_final.csv`
+- Fix random seeds to ensure reproducibility.
+- Keep logs (metrics per fold/seed) and save trained models (pickle / joblib / model.save).
+- Use nested cross-validation for hyperparameter tuning if the dataset is small.
 
-CSV-urile reprezentative pentru clasificare sunt in:
+## Contributing
 
-- `classification_csv_selected`
+Contributions are welcome:
 
-## Structura finala
+- Open an issue to discuss proposed changes or new features.
+- Submit a pull request for fixes, new features, or model optimizations.
 
-Fisiere importante in radacina:
+Please include clear descriptions and minimal reproducible examples in PRs.
 
-- `main.ipynb`
-- `README.md`
-- `Raport_Tema1_CC.pdf`
-- `submission_regression_final.csv`
-- `submission_classification_final.csv`
-- cele trei fisiere de date CSV
-- PDF-ul cerintei
-- `regression_recovered_code`, cu artefactele importante ale perfectionarii regresiei
+## License
 
-Experimentele brute care nu au dus la decizii utile au ramas in
-`_archive_unused_experiments_2026-05-03` si nu sunt incluse in pachetul final de predare.
+This repository is provided as-is. If you want an explicit license, `MIT` is recommended for wide permissiveness.
+
+## Contact
+
+For questions or suggestions, open an issue on GitHub.
+
+---
+
+Thanks for checking out this project — if you like it, please give it a star ⭐!
