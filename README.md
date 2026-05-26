@@ -1,45 +1,106 @@
+# Kaggle Regression & Classification
 
-# Kaggle Project — Regression & Classification (Complete)
+A clean, public-facing Kaggle-style machine learning project for two supervised learning tasks on the same tabular dataset:
 
-⭐ If you find this project useful, please give it a star on GitHub — it helps a lot!
+- **Regression:** predict `salary`
+- **Classification:** predict the `vacation` class
 
-## Theory & Context
+The project walks from exploratory analysis and simple baselines to stronger tabular models, feature engineering, validation checks, and final submission files.
 
-This repository contains a complete solution for two tasks on educational data: a regression task (continuous prediction) and a classification task (categorical prediction). The main goals are:
+## Highlights
 
-- Understand and preprocess tabular data (feature engineering, handling missing values, encoding categoricals).
-- Train robust models using ensemble algorithms (LightGBM, XGBoost, etc.).
-- Evaluate performance with cross-validation (K-Fold) and produce final submission files.
+| Task | Final model direction | Local result |
+| --- | --- | --- |
+| Regression | log-target modeling, target encoding, pseudo-labeling, LightGBM-style seed ensembling, data-centric feature variants | MSE `2.8753e7`, RMSE `5362.21`, MAE `4281.30`, R2 `0.9792` |
+| Classification | HistGradientBoosting selected by local accuracy, with CatBoost/LightGBM/ExtraTrees comparisons | Accuracy `0.7611`, macro F1 `0.6777`, weighted F1 `0.7568` |
 
-Methodological principles used:
+Final files ready for upload are stored in [`submissions/`](submissions/):
 
-- Clear separation between raw and aggregated features, and ablation studies to compare strategies.
-- Multi-seed training and blending/stacking to reduce variance and improve generalization.
-- Metric choices: regression metrics (RMSE, MAE); classification metrics (AUC-ROC, accuracy, F1 where appropriate).
+- [`submission_regression_final.csv`](submissions/submission_regression_final.csv)
+- [`submission_classification_final.csv`](submissions/submission_classification_final.csv)
 
-## Results Summary
+## Visual Overview
 
-Final output files are included in the repository:
+| Target distributions | Regression progression |
+| --- | --- |
+| <img src="assets/figures/003_targets_distribution.png" alt="Target distributions" width="420"> | <img src="assets/figures/008_regression_perfection_stages.png" alt="Regression model progression" width="420"> |
 
-- [submission_regression_final.csv](submission_regression_final.csv) — final regression predictions.
-- [submission_classification_final.csv](submission_classification_final.csv) — final classification predictions.
+| Classification comparison | Confusion matrix |
+| --- | --- |
+| <img src="assets/figures/011_classification_model_comparison.png" alt="Classification model comparison" width="420"> | <img src="assets/figures/012_classification_confusion_matrix.png" alt="Classification confusion matrix" width="420"> |
 
-Experiment reports and summaries are stored in `_archive_unused_experiments_2026-05-03/`.
+## Repository Structure
 
-## Repository Structure (selected)
+```text
+.
+|-- assets/figures/          # plots and Kaggle screenshots used in the README
+|-- data/                    # train, local test, and private test CSV files
+|-- notebooks/main.ipynb     # main reproducible notebook
+|-- results/
+|   |-- classification/      # metrics, reports, confusion matrix, baseline submission
+|   `-- regression/          # selected baseline and staged regression submissions
+|-- submissions/             # final upload-ready CSV files
+|-- requirements.txt
+`-- README.md
+```
 
-- [main.ipynb](main.ipynb) — main notebook for exploration, training and submission generation.
-- [main copy.ipynb](main%20copy.ipynb) — auxiliary notebook copy.
-- [CC_education_economy_train.csv](CC_education_economy_train.csv) — training dataset.
-- [CC_education_economy_test.csv](CC_education_economy_test.csv) — test dataset.
-- [CC_private_test.csv](CC_private_test.csv) — private test dataset (if applicable).
-- `_archive_unused_experiments_2026-05-03/` — experiment history, results and helper scripts.
+## Workflow
 
-## Installation
+1. **Explore the data**
+   - inspect numeric and categorical distributions
+   - check missing values, outliers, redundancy, and target imbalance
+   - use Cramer's V / chi-square style association for categorical relationships
 
-Prerequisites: Python 3.8+ recommended, `pip`, and a virtual environment tool (`venv`, `virtualenv`, or `conda`).
+2. **Build regression models**
+   - start with `LinearRegression`, Ridge, Lasso, and ElasticNet baselines
+   - move to stronger tree/boosting models with log-transformed target
+   - add target encoding, interaction features, pseudo-labeling, adversarial validation checks, and seed ensembling
 
-Example (venv):
+3. **Build classification models**
+   - start with `DecisionTreeClassifier` and a dummy baseline
+   - compare RandomForest, ExtraTrees, HistGradientBoosting, LightGBM, and CatBoost
+   - evaluate with accuracy, macro metrics, weighted metrics, per-class metrics, and a confusion matrix
+
+4. **Generate submissions**
+   - regression output: `id,prediction` with continuous salary predictions
+   - classification output: `id,prediction` with vacation class labels
+
+## Results
+
+### Regression
+
+The linear baseline is strong but limited by nonlinear interactions between role, education, location, experience, company attributes, and the shifted private-test distribution.
+
+The final regression direction uses:
+
+- `log1p` target transformation
+- categorical interaction features
+- target encoding without leakage
+- pseudo-labeling on the private test distribution with reduced sample weight
+- seed ensembling and data-centric feature variants
+
+The final regression submission has `16,000` rows, prediction mean `156,985.47`, and prediction range `42,531.87` to `311,244.94`.
+
+<img src="assets/figures/013_kaggle_regression.png" alt="Regression Kaggle result" width="720">
+
+### Classification
+
+The selected classifier is `HistGradientBoosting`, chosen by local accuracy. CatBoost is very close and slightly stronger on some macro metrics, which is useful context because the class distribution is imbalanced.
+
+Final private-test prediction distribution:
+
+| Class | Count |
+| --- | ---: |
+| No Vacation | 5,452 |
+| Small | 4,522 |
+| Medium | 3,397 |
+| Large | 2,629 |
+
+<img src="assets/figures/014_kaggle_classification.png" alt="Classification Kaggle result" width="720">
+
+## Reproduce Locally
+
+Create an environment and install dependencies:
 
 ```bash
 python3 -m venv .venv
@@ -48,56 +109,17 @@ pip install -U pip
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is not present, install minimal packages manually:
+Run the notebook:
 
 ```bash
-pip install jupyterlab numpy pandas scikit-learn lightgbm xgboost matplotlib seaborn
+jupyter lab notebooks/main.ipynb
 ```
 
-## Usage — reproduce experiments
+The notebook detects the repository root automatically, so it can be opened from the repo root or from the `notebooks/` folder. Outputs are written to `results/` and `submissions/`.
 
-1. Activate the virtual environment (see Installation).
-2. Start JupyterLab or Jupyter Notebook:
+## Key Files
 
-```bash
-jupyter lab
-# or
-jupyter notebook
-```
-
-3. Open [main.ipynb](main.ipynb) and run the cells in order to:
-   - Load the datasets.
-   - Execute preprocessing and feature engineering.
-   - Run training loops (K-Fold, multi-seed).
-   - Produce submission files `submission_*.csv`.
-
-Practical notes:
-- To speed up experiments, follow a stepwise approach: feature engineering → local validation → final training.
-- For batch runs, extract relevant notebook cells into a Python script.
-
-## Best Practices & Recommendations
-
-- Fix random seeds to ensure reproducibility.
-- Keep logs (metrics per fold/seed) and save trained models (pickle / joblib / model.save).
-- Use nested cross-validation for hyperparameter tuning if the dataset is small.
-
-## Contributing
-
-Contributions are welcome:
-
-- Open an issue to discuss proposed changes or new features.
-- Submit a pull request for fixes, new features, or model optimizations.
-
-Please include clear descriptions and minimal reproducible examples in PRs.
-
-## License
-
-This repository is provided as-is. If you want an explicit license, `MIT` is recommended for wide permissiveness.
-
-## Contact
-
-For questions or suggestions, open an issue on GitHub.
-
----
-
-Thanks for checking out this project — if you like it, please give it a star ⭐!
+- [`notebooks/main.ipynb`](notebooks/main.ipynb): full EDA, modeling, evaluation, and submission generation
+- [`results/regression/REGRESSION_CSV_INDEX.csv`](results/regression/REGRESSION_CSV_INDEX.csv): selected regression artifacts
+- [`results/classification/CLASSIFICATION_CSV_INDEX.csv`](results/classification/CLASSIFICATION_CSV_INDEX.csv): selected classification artifacts
+- [`submissions/SUBMISSION_INDEX.csv`](submissions/SUBMISSION_INDEX.csv): compact summary of final upload files

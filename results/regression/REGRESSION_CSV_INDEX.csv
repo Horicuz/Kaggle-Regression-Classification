@@ -1,0 +1,10 @@
+file,rows,columns,prediction_mean
+baseline_submissions/submission_regression_baseline_lasso_alpha1.csv,16000,"id,prediction",156988.952350
+baseline_submissions/submission_regression_baseline_linear.csv,16000,"id,prediction",156989.634218
+baseline_submissions/submission_regression_baseline_ridge_alpha10.csv,16000,"id,prediction",156981.634677
+staged_submissions/submission_regression_stage_1_catboost_pseudo.csv,16000,"id,prediction",157374.584324
+staged_submissions/submission_regression_stage_2_lgbm_pseudo.csv,16000,"id,prediction",157357.458484
+staged_submissions/submission_regression_stage_3_lgbm_seed_ensemble.csv,16000,"id,prediction",157309.977688
+staged_submissions/submission_regression_stage_4_away_direction.csv,16000,"id,prediction",157310.644633
+staged_submissions/submission_regression_stage_5_aggbins_dropraw75.csv,16000,"id,prediction",157353.346808
+staged_submissions/submission_regression_stage_6_v2_dropcert20_final.csv,16000,"id,prediction",157346.999753

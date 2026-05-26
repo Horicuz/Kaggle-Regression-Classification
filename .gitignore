@@ -1,4 +1,3 @@
-..venv
 .venv/
 venv/
 ENV/
@@ -7,6 +6,9 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 .DS_Store
+.cache/
+.matplotlib_cache/
+.jupyter_data/
 .idea/
 .vscode/
 *.egg-info/

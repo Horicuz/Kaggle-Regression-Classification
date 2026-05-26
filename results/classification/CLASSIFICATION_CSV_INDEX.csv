@@ -1,0 +1,7 @@
+file,rows,columns,best_accuracy,prediction_top
+classification_baseline_results.csv,4,"model,train_accuracy,accuracy,precision_macro,recall_macro,f1_macro,precision_weighted,recall_weighted,f1_weighted,note",0.725562,
+classification_final_confusion_matrix.csv,4,",Large,Medium,No Vacation,Small",,
+classification_final_kfold_results.csv,3,"fold,model,accuracy,f1_macro,prediction_NoVacation_percent",0.761457,
+classification_model_results.csv,12,"model,train_accuracy,accuracy,precision_macro,recall_macro,f1_macro,precision_weighted,recall_weighted,f1_weighted,note",0.761125,
+classification_per_class_metrics.csv,12,"model,accuracy,precision_Large,recall_Large,f1_Large,precision_Medium,recall_Medium,f1_Medium,precision_No_Vacation,recall_No_Vacation,f1_No_Vacation,precision_Small,recall_Small,f1_Small",0.761125,
+submission_classification_baseline.csv,16000,"id,prediction",,Small (4973)

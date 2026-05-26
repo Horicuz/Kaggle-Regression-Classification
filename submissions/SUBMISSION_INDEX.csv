@@ -1,0 +1,3 @@
+file,rows,columns,prediction_summary
+submission_classification_final.csv,16000,"id,prediction",No Vacation=5452; Small=4522; Medium=3397; Large=2629
+submission_regression_final.csv,16000,"id,prediction",mean=156985.47; min=42531.87; max=311244.94
